@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogixTrack Sign Up</title>
+
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- LEFT -->
+    <div class="left">
+        <div class="left-content">
+            <h1>LogixTrack</h1>
+            <h2>Create Your Account</h2>
+            <p>
+                Monitor vehicles, optimize routes, and automate deliveries — all from a single platform designed for logistics teams who demand speed, efficiency, and accuracy.
+            </p>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+        <div class="signup-card">
+
+            <div class="logo"><a href="/"><img src="images/logic.png" alt="" style="width: 120px;"></a></div>
+            <h3>Get Started</h3>
+
+            <form id="signupForm">
+
+                <div class="form-row">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+
+                <!-- <input type="text" id="clinic" placeholder="Clinic Name"> -->
+
+                <div class="form-row">
+                    <div class="password-field">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <i class="fa-solid fa-eye toggle"></i>
+                    </div>
+
+                    <div class="password-field">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                        <i class="fa-solid fa-eye toggle"></i>
+                    </div>
+                </div>
+
+                <button type="submit">CREATE ACCOUNT</button>
+
+                <!-- <div class="divider">or</div>
+
+                <div class="google">
+                    <i class="fa-brands fa-google"></i>
+                    Sign up with Google
+                </div> -->
+
+                <div class="divider">
+                    Already have an account? <a href="login.html">Login</a>
+                </div>
+
+                <!-- ERROR -->
+                <div class="error" id="errorMsg"></div>
+
+                <!-- SUCCESS -->
+                <div class="success" id="successMsg">
+                    ✅ Account created successfully!
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form = document.getElementById("signupForm");
+            const password = document.getElementById("password");
+            const confirmPassword = document.getElementById("confirmPassword");
+            const error = document.getElementById("errorMsg");
+            const success = document.getElementById("successMsg");
+
+            const toggles = document.querySelectorAll(".toggle");
+
+            // Toggle password
+            toggles.forEach(icon => {
+                icon.addEventListener("click", () => {
+                    const input = icon.previousElementSibling;
+
+                    if (input.type === "password") {
+                        input.type = "text";
+                        icon.classList.replace("fa-eye", "fa-eye-slash");
+                    } else {
+                        input.type = "password";
+                        icon.classList.replace("fa-eye-slash", "fa-eye");
+                    }
+                });
+            });
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                error.classList.remove("active");
+                success.classList.remove("active");
+
+                if (password.value !== confirmPassword.value) {
+                    error.innerText = "❌ Passwords do not match";
+                    error.classList.add("active");
+                    return;
+                }
+
+                if (password.value.length < 6) {
+                    error.innerText = "❌ Password must be at least 6 characters";
+                    error.classList.add("active");
+                    return;
+                }
+
+                success.classList.add("active");
+                form.reset();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

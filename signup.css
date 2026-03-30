@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+/* LEFT */
+.left {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1584982751601-97dcc096659c') no-repeat center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    position: relative;
+}
+
+.left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.8), rgba(92, 137, 205, 0.7));
+}
+
+.left {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') no-repeat center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* DARK BRAND OVERLAY */
+.left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 61, 62, 0.9), rgba(15, 61, 62, 0.7));
+}
+
+/* ORANGE GLOW */
+.left::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 250px;
+    height: 250px;
+    background: #F97316;
+    filter: blur(120px);
+    opacity: 0.4;
+}
+
+.left-content {
+    position: relative;
+    z-index: 2;
+}
+
+.left h1 {
+    font-size: 34px;
+    opacity: 0.9;
+}
+
+.left h2 {
+    font-size: 44px;
+    margin: 15px 0;
+    color: #F97316;
+}
+
+.left p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* RIGHT */
+.right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0F3D3E, #092c2d);
+}
+
+/* CARD */
+.signup-card {
+    width: 360px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.logo {
+    text-align: center;
+    color: #F97316;
+    font-weight: 600;
+}
+
+.signup-card h3 {
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+.signup-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+}
+
+/* FORM */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* ROW */
+.form-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* PASSWORD */
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #F97316, #ff8a2a);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+}
+
+/* DIVIDER */
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 12px;
+    color: #e4e4e4;
+}
+
+.divider a {
+
+    color: #F97316;
+}
+
+/* GOOGLE */
+.google {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ERROR */
+.error {
+    display: none;
+    background: #fee2e2;
+    color: #7f1d1d;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.error.active {
+    display: block;
+}
+
+/* SUCCESS */
+.success {
+    display: none;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.success.active {
+    display: block;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left {
+        height: 40vh;
+    }
+
+    .right {
+        height: 60vh;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}

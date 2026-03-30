@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogixTrack – Real-Time Fleet Tracking & Logistics Automation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="images/logic.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-strip">
+            <div class="container-fluid">
+                <div class="flex">
+                    <div class="col1">
+                        <div class="nav-text left-side">
+                            <ul>
+                                <li><a href="mailto:info@tradeshipinc.com">support@logixtrack.eu</a></li>
+                                <li><a href="tel:+1(631)3935134">+32 3 555 0194</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <div class="right-side">
+                            <!-- Location -->
+
+                            <!-- Social Links -->
+
+                            <!-- Request Demo -->
+                            <div class="nav-text demo-link"><a href="javscript:void(0)" class="model-open openDemo"
+                                    id="openDemo"><span>Request a
+                                        Demo</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrapper">
+            <div class="container-fluid">
+                <div class="flex">
+                    <div class="col1">
+                        <div class="custom-logo"><a href="/"><img src="images/logic.png" alt="Trade Ship"></a>
+                        </div>
+                    </div>
+                    <div class="menu-trigger model-open" data-model=".model-navigaition">
+                        <span></span>
+                    </div>
+                    <div class="col2">
+                        <div class="custom-nav nav-text">
+                            <ul>
+                                <li class="has-dropdown"><a href="#features">Features</a>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="#how-it-works">How it works</a>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="#solution">Solutions</a>
+
+                                </li>
+
+
+                                <li><a href="#showcase">Dashboard</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- navigation Model -->
+    <div class="model modelPop model-navigaition">
+        <div class="close close_model"><i class="fas-solid fa fa-close"></i></div>
+        <div class="model-body">
+            <div class="navigation">
+                <ul>
+                    <li class="has-dropdown"><a href="#features">Features</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#how-it-works">How it works</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#solution">Solutions</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#showcase">Dashboard</a>
+                    </li>
+
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner home-banner">
+        <div class="video">
+            <video class="video1" autoplay muted loop>
+                <source src="images/video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="banner-content">
+            <div class="container-fluid">
+                <div class="content">
+                    <h1>Real-Time Fleet Tracking & Logistics Automation</h1>
+                    <p>Track vehicles, optimize routes, and automate logistics operations — all from one powerful
+                        platform.</p>
+                </div>
+                <div class="link_btn">
+                    <a href="javascript:void(0);" class="model-open openDemo" data-model=".EnquiryModel"><span>Get
+                            Demo</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="trust">
+        <div class="container">
+            <p class="trust-text">Trusted by logistics teams & fleet operators</p>
+
+            <div class="logos">
+                <div class="logo-item">FastLogistics</div>
+                <div class="logo-item">MoveXpress</div>
+                <div class="logo-item">CargoFlow</div>
+                <div class="logo-item">FleetCore</div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <div class="container">
+
+            <h2>Powerful Features</h2>
+            <p class="subtitle">Everything you need to manage your fleet smarter</p>
+
+            <div class="grid">
+
+                <div class="card">
+                    <span>🚛</span>
+                    <h3>Real-Time Fleet Tracking</h3>
+                    <p>Monitor every vehicle live with accurate GPS tracking and status updates.</p>
+                </div>
+
+                <div class="card">
+                    <span>🗺️</span>
+                    <h3>Smart Route Optimization</h3>
+                    <p>Reduce fuel costs and delivery time with AI-powered route planning.</p>
+                </div>
+
+                <div class="card">
+                    <span>📱</span>
+                    <h3>Driver Mobile App</h3>
+                    <p>Assign tasks, track deliveries, and capture proof with photos & signatures.</p>
+                </div>
+
+                <div class="card">
+                    <span>🔔</span>
+                    <h3>Alerts & Notifications</h3>
+                    <p>Get instant alerts for delays, route deviations, and unauthorized stops.</p>
+                </div>
+
+                <div class="card">
+                    <span>📍</span>
+                    <h3>Geofencing</h3>
+                    <p>Set smart boundaries for warehouses and delivery zones with automatic triggers.</p>
+                </div>
+
+                <div class="card">
+                    <span>📊</span>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Track KPIs like on-time delivery rate, fuel usage, and operational efficiency.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="showcase" id="showcase">
+        <h2>Powerful Tools to Manage Your Fleet</h2>
+
+        <div class="slider">
+
+            <button class="nav prev">&#10094;</button>
+
+            <div class="slides">
+                <div class="slide">
+                    <img src="images/Dashboard.png" alt="">
+                    <p>Dashboard</p>
+                </div>
+                <div class="slide">
+                    <img src="images/Live_Fleet.png" alt="">
+                    <p>Live Fleet Map</p>
+                </div>
+                <div class="slide">
+                    <img src="images/Route-optimization.png" alt="">
+                    <p>Route Optimization</p>
+                </div>
+                <div class="slide">
+                    <img src="images/Alert.png" alt="">
+                    <p>Alerts Panel</p>
+                </div>
+            </div>
+            <button class="nav next">&#10095;</button>
+
+        </div>
+    </section>
+    <section class="how" id="how-it-works">
+        <div class="container">
+
+            <h2>How It Works</h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="circle">1</div>
+                    <h3>Add Fleet & Drivers</h3>
+                    <p>Register your vehicles and assign drivers in minutes.</p>
+                </div>
+
+                <div class="step">
+                    <div class="circle">2</div>
+                    <h3>Plan Optimized Routes</h3>
+                    <p>Create efficient delivery routes with smart optimization.</p>
+                </div>
+
+                <div class="step">
+                    <div class="circle">3</div>
+                    <h3>Track Deliveries</h3>
+                    <p>Monitor deliveries live with real-time GPS tracking.</p>
+                </div>
+
+                <div class="step">
+                    <div class="circle">4</div>
+                    <h3>Analyze & Improve</h3>
+                    <p>Use analytics to improve efficiency and reduce costs.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="dashboard" id="solution">
+        <div class="container dash-flex">
+
+            <!-- LEFT CONTENT -->
+            <div class="dash-text">
+                <h2>Make Data-Driven Logistics Decisions</h2>
+
+                <ul>
+                    <li>📊 On-time delivery rate tracking</li>
+                    <li>⛽ Fuel consumption insights</li>
+                    <li>🚚 Trips per day analytics</li>
+                    <li>👨‍✈️ Driver performance monitoring</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="dash-img">
+                <img src="images/Dashboard.png" alt="Dashboard">
+            </div>
+
+        </div>
+    </section>
+    <section class="cta">
+        <div class="cta-content">
+
+            <h2>Ready to Transform Your Fleet Operations?</h2>
+
+            <p>
+                Join logistics companies using LogixTrack to optimize deliveries and reduce costs.
+            </p>
+
+            <a href="login.html" class="cta-btn">🚀 Get Started</a>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer-grid">
+
+            <!-- LOGO + ABOUT -->
+            <div class="footer-col">
+                <h2 class="logo"><a href="/"><img src="images/logic.png" alt=""></a></h2>
+                <p>
+                    LogixTrack helps logistics companies track, optimize, and automate fleet operations in real time.
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#solution">Solution</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- PRODUCT -->
+            <div class="footer-col">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#showcase">Fleet Tracking</a></li>
+                    <li><a href="#showcase">Route Optimization</a></li>
+                    <li><a href="#showcase">Driver App</a></li>
+                </ul>
+            </div>
+
+            <!-- SUPPORT -->
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">Documentation</a></li>
+                    <!-- <li><a href="#">API Access</a></li> -->
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>📍LogixTrack Europe N.V.
+                    Entrepotkaai 15, Bus 4
+                    2000 Antwerp
+                    Belgium</p>
+                <p>📧 support@logixtrack.eu</p>
+                <p>📞 +32 3 555 0194</p>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="footer-bottom">
+            <p>© 2026 LogixTrack. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="demo-overlay" id="demoOverlay"></div>
+
+    <!-- Side Popup -->
+    <div class="demo-popup" id="demoPopup">
+
+        <!-- Header -->
+        <div class="popup-header">
+            <h3>Book a Demo</h3>
+            <span id="closeDemo">&times;</span>
+        </div>
+
+        <!-- Form -->
+        <form class="demo-form" id="demoForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="phone" id="phone" maxlength="10" placeholder="Phone Number" required>
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit">Request Demo</button>
+
+            <div class="success-message" id="successMsg">
+                ✅ Your request has been submitted successfully.
+            </div>
+        </form>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                scroltop = $(this).scrollTop()
+                if (scroltop > ($(window).height()) / 100) {
+                    $('header').addClass("header-fixed");
+                } else {
+                    $('header').removeClass("header-fixed")
+                }
+            })
+            // Check Input field
+            $(".input-box").each(function () {
+                if ($(this).val() != "") {
+                    $(this).addClass("valid")
+                } else {
+                    $(this).removeClass("valid")
+                }
+            })
+
+            // Form Input 
+            $(".input-box").on("focusout", function () { $(this).val() ? $(this).addClass("valid") : $(this).removeClass("valid") })
+            $('.model-open').on('click', function (e) {
+                e.preventDefault();
+                var model = $(this).attr('data-model')
+                $('.model').removeClass('is-open');
+                $('.overlay').addClass('active_overla');
+                $(model).addClass('is-open');
+            })
+            $('.close_model,.overlay,.has-dropdown a').on('click', function () {
+                $('.model').removeClass('is-open');
+                $('.overlay').removeClass('active_overla');
+            })
+
+            let index = 0;
+            const total = $('.slide').length;
+
+            function updateSlider() {
+                $('.slides').css({
+                    transform: 'translateX(-' + (index * 100) + '%)',
+                    transition: '0.5s ease'
+                });
+            }
+
+            $('.next').on('click', function () {
+                index++;
+                if (index >= total) index = 0;
+                updateSlider();
+            });
+
+            $('.prev').on('click', function () {
+                alert('juywudgtuw')
+                index--;
+                if (index < 0) index = total - 1;
+                updateSlider();
+            });
+
+            // auto slide
+            setInterval(function () {
+                index++;
+                if (index >= total) index = 0;
+                updateSlider();
+            }, 3000);
+
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                let target = $(this.getAttribute('href'));
+
+                if (target.length) {
+                    let offset = 100; // header height
+
+                    let offsetPosition = target.offset().top - offset;
+
+                    $('html, body').animate({
+                        scrollTop: offsetPosition
+                    }, 600); // duration in ms
+                }
+            });
+            $('.openDemo').on('click', function (e) {
+                e.preventDefault();
+                $('#demoPopup').addClass('active');
+                $('#demoOverlay').addClass('active');
+            });
+
+            // CLOSE POPUP
+            function closePopup() {
+                $('#demoPopup').removeClass('active');
+                $('#demoOverlay').removeClass('active');
+            }
+
+            $('#closeDemo, #demoOverlay').on('click', function () {
+                closePopup();
+            });
+
+            // FORM SUBMIT
+            $('#demoForm').on('submit', function (e) {
+                e.preventDefault();
+
+                $('#successMsg').addClass('active');
+                this.reset();
+
+                setTimeout(function () {
+                    $('#successMsg').removeClass('active');
+                    closePopup();
+                }, 5000);
+            });
+
+        })
+        document.getElementById("phone").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+
+    </script>
+</body>
+
+</html>

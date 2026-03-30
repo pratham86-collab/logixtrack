@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogixTrack Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <div class="left-content">
+            <h1>LogixTrack</h1>
+            <h2>Real-Time Fleet Tracking.</h2>
+            <p>
+                Monitor vehicles, optimize routes, and automate deliveries — all from a single platform designed for logistics teams who demand speed, efficiency, and accuracy.
+            </p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <div class="login-card">
+
+            <div class="logo"><a href="/"><img src="images/logic.png" alt="" style="width: 120px;"></a></div>
+            <h3>Welcome Back</h3>
+
+            <form id="loginForm">
+
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <div class="password-field">
+                    <input type="password" id="password" placeholder="********" required>
+                    <i class="fa-solid fa-eye" id="togglePassword"></i>
+                </div>
+
+                <!-- <div class="links">
+                    <span></span>
+                    <a href="#">Forgot password?</a>
+                </div> -->
+
+                <button type="submit">SIGN IN</button>
+
+                <!-- <div class="divider">or</div>
+
+                <div class="google">
+                    <i class="fa-brands fa-google"></i>
+                    Sign in with Google
+                </div> -->
+
+                <div class="divider">
+                    New here? <a href="signup.html">Create Account</a>
+                </div>
+
+                <div class="error" id="errorMsg">
+                    ❌ Invalid credentials
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form = document.getElementById("loginForm");
+            const email = document.getElementById("email");
+            const password = document.getElementById("password");
+            const error = document.getElementById("errorMsg");
+            const toggle = document.getElementById("togglePassword");
+
+            // Show/Hide password
+            toggle.addEventListener("click", () => {
+                if (password.type === "password") {
+                    password.type = "text";
+                    toggle.classList.replace("fa-eye", "fa-eye-slash");
+                } else {
+                    password.type = "password";
+                    toggle.classList.replace("fa-eye-slash", "fa-eye");
+                }
+            });
+
+            // Login logic
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const validEmail = "admin@healthsynch.com";
+                const validPass = "123456";
+
+                error.classList.remove("active");
+
+                if (email.value !== validEmail || password.value !== validPass) {
+                    error.classList.add("active");
+                    return;
+                }
+
+                alert("Login Successful 🚀");
+                form.reset();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
